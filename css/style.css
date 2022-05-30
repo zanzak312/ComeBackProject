@@ -73,6 +73,169 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------End of Format Reset------------*/
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 800px;
+  width: 100vw;
+  background: url("../img/header/man_circle.png") 80% no-repeat, url("../img/header/bg_header.png") 50%/cover no-repeat;
+}
+
+.header .upper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0 0 0;
+}
+
+.header .upper .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .upper .logo .name {
+  margin: 10px 0 5px 0;
+  font-family: 'Lato';
+  font-weight: 300;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 2.4px;
+}
+
+.header .upper .logo .description {
+  font-family: Lato;
+  font-size: 6px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.04px;
+}
+
+.header .upper .navigation {
+  width: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .upper .navigation .nav {
+  font-family: 'Asap';
+  color: #4d4d4d;
+  font-size: 15px;
+  text-transform: uppercase;
+  height: 20px;
+}
+
+.header .upper .navigation .nav:hover {
+  color: black;
+  border-bottom: 2px solid #000000;
+}
+
+.header .info {
+  margin: 175px 0 0 0;
+}
+
+.header .info .name .myname {
+  color: #4d4d4d;
+  font-family: 'Asap';
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 67px;
+  margin: 0 0 5px 0;
+}
+
+.header .info .name .mywork {
+  color: #4d4d4d;
+  font-family: 'Asap';
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 67px;
+  opacity: 0.54;
+}
+
+.header .buttons {
+  margin: 30px 0 0 0;
+  width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .buttons .button:hover {
+  border: none;
+  background: #fff;
+  -webkit-box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.7s ease all;
+  transition: 0.7s ease all;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  height: 50px;
+  color: #4d4d4d;
+  font-family: 'Asap';
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.96px;
+  border: 1px solid #4d4d4d;
+  -webkit-transition: 0.7s ease all;
+  transition: 0.7s ease all;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,6 +254,6 @@ h1, h2, h3, h4, h5, h6 {
 .social:hover {
   background-color: #395693;
   color: #fff;
-  -webkit-transition: 0.1s ease all;
-  transition: 0.1s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
