@@ -5,6 +5,18 @@
 @import "_mixins.scss";
 @import "_fonts.scss";
 
-body {
-    
+.
+
+.social {
+	display: flex;
+	height: 27px;
+	width: 27px;
+	font-size: 16px;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		background-color: #395693;
+		color: #fff;
+		transition: 0.1s ease all;
+	}
 }
