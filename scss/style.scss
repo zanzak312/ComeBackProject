@@ -5,99 +5,13 @@
 @import "_mixins.scss";
 @import "_fonts.scss";
 
+html {
+	font-size: 1px;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
-}
-
-.header {
-	display: flex;
-	height: 800px;
-	width: 100vw;
-	background: url('../img/header/man_circle.png') 80% no-repeat, url('../img/header/bg_header.png') 50%/cover no-repeat;
-		.upper {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			margin: 30px 0 0 0;
-			.logo {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				.name {
-					margin: 10px 0 5px 0;
-					font-family: 'Lato';
-					font-weight: 300;
-					line-height: 16px;
-					text-transform: uppercase;
-					font-size: 15px;
-					letter-spacing: 2.4px;
-				}
-				.description {
-					font-family: Lato;
-					font-size: 6px;
-					font-weight: 400;
-					line-height: 16px;
-					text-transform: uppercase;
-					letter-spacing: 2.04px;
-				}
-			}
-			.navigation {
-				width: 460px;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				.nav {
-					font-family: 'Asap';
-					color: #4d4d4d;
-					font-size: 15px;
-					text-transform: uppercase;
-					height: 20px;
-					&:hover {
-						color: black;
-						border-bottom: 2px solid #000000;
-					}
-				}
-			}
-		}
-		.info {
-			margin: 175px 0 0 0;
-			.name {
-				.myname {
-					color: #4d4d4d;
-					font-family: 'Asap';
-					font-size: 90px;
-					font-weight: 700;
-					line-height: 67px;
-					margin: 0 0 5px 0;
-				}
-				.mywork {
-					color: #4d4d4d;
-					font-family: 'Asap';
-					font-size: 22px;
-					font-weight: 500;
-					line-height: 67px;
-					opacity: 0.54;
-				}
-			}
-		}
-		.buttons {
-			margin: 30px 0 0 0;
-			width: 340px;
-			display: flex;
-			justify-content: space-between;
-			.button {
-				
-				&:hover {
-					border: none;
-					background: #fff;
-					box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
-					transition: 0.7s ease all;
-				}
-			}
-		}
-
 }
 
 .button {
@@ -110,7 +24,7 @@
 	font-family: 'Asap';
 	font-weight: 500;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 16rem;
 	letter-spacing: 0.96px;
 	border: 1px solid #4d4d4d;
 	transition: 0.7s ease all;
@@ -123,13 +37,584 @@
 
 
 
+.header {
+	display: flex;
+	height: 800px;
+	width: 100vw;
+	background: url('../img/header/man_circle.png') 80% 140px no-repeat, url('../img/header/bg_header.png') 50%/cover no-repeat;
+
+	.upper {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 30px 0 0 0;
+
+		.logo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.name {
+				margin: 10px 0 5px 0;
+				font-family: 'Lato';
+				font-weight: 300;
+				line-height: 16px;
+				text-transform: uppercase;
+				font-size: 15rem;
+				letter-spacing: 2.4px;
+			}
+
+			.description {
+				font-family: Lato;
+				font-size: 6rem;
+				font-weight: 400;
+				line-height: 16px;
+				text-transform: uppercase;
+				letter-spacing: 2.04px;
+			}
+		}
+
+		.navigation {
+			width: 460px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			.nav {
+				font-family: 'Asap';
+				color: #4d4d4d;
+				font-size: 15rem;
+				text-transform: uppercase;
+				height: 20px;
+				position: relative;
+				transition: 1s ease all;
+				&:hover {
+					color: black;
+					transition: 1s ease all;
+					&:after {
+						content: '';
+						display: inline-block;
+						position: absolute;
+						background: #000;
+						height: 2px;
+						width: 100%;
+						top: 19px;
+						left: 0;
+						transition: 1s ease all;
+					}
+				}
+			}
+		}
+	}
+
+	.info {
+		margin: 175px 0 0 0;
+
+		.name {
+			.myname {
+				color: #4d4d4d;
+				font-family: 'Asap';
+				font-size: 90rem;
+				font-weight: 500;
+				line-height: 67px;
+				margin: 0 0 5px 0;
+			}
+
+			.mywork {
+				color: #4d4d4d;
+				font-family: 'Asap';
+				font-size: 22rem;
+				font-weight: 500;
+				line-height: 67px;
+				opacity: 0.54;
+			}
+		}
+	}
+
+	.buttons {
+		margin: 30px 0 0 0;
+		width: 340px;
+		display: flex;
+		justify-content: space-between;
+		.button {
+			&:hover {
+				border: 1px solid #fff;
+				background: #fff;
+				box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+				transition: 0.7s ease all;
+			}
+		}
+	}
+}
+
+.about {
+	height: 675px;
+	width: 100vw;
+	.aboutimage {
+		display: flex;
+		flex: 0 1 570px;
+		.aboutimg {
+			max-width: 100%;
+		}
+	}
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 110px auto 0 auto;
+		align-items: center;
+	}
+	&__description {
+		margin: 0 0 35px 0;
+		font-family: 'Asap';
+		color: #4d4d4d;
+		font-weight: 400;
+		line-height: 26px;
+		font-size: 16rem;
+
+	}
+}
+.aboutme {
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	width: 32vw;
+	.pagename {
+		margin: 0 0 10px 0;
+	}
+	.button {
+		padding: 20px 45px;
+		width: 245px;
+		font-size: 16rem;
+		&:hover {
+			background-color: #4d4d4d;
+			color: #fff;
+			box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+.pagename {
+	color: #4d4d4d;
+	font-family: 'Asap';
+	font-weight: 700;
+	line-height: 49px;
+	font-size: 46rem;
+	position: relative;
+	letter-spacing: 5.52px;
+	text-transform: uppercase;
+	&:after {
+		content: '';
+		position: absolute;
+		top: -20px;
+		left: 0;
+		width: 60px;
+		height: 4px;
+		display: inline-block;
+		background-color: #4d4d4d;
+	}
+}
+
+.services {
+	height: 700px;
+	background-color: #f6f6f6;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.pagename {
+		margin: 142px 0 70px 0;
+		display: block;
+		&::after {
+			left: 35%;
+		}
+	}
+
+	.columns {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		
+		&__column {
+			display: flex;
+			flex-direction: column;
+			height: 340px;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		&__column-element {
+			text-align: center;
+			width: 200px;
+		}
+
+		&__column-element-image {
+			margin: 0 0 10px 0;
+			text-align: center;
+		}
+
+		&__column-element-name {
+			font-family: Asap;
+			color: #4d4d4d;
+			font-weight: 500;
+			line-height: 33px;
+			font-size: 24rem;
+			text-align: center;
+		}
+	}
+}
+
+.skills {
+	height: 766px;
+	background: url('../img/skills/graph.png') 50% 65% no-repeat;
+	.container {
+		display: flex;
+		justify-content: center;
+	}
+	.pagename {
+		margin: 140px 0 0 0;
+		display: inline-block;
+		&::after {
+			left: 40%;
+		}
+	}
+}
+
+.portfolio {
+	height: 1095px;
+	background-color: #f6f6f6;
+
+	
+
+	.button {
+		padding: 20px 45px;
+		width: 190px;
+		&:hover {
+			border: 1px solid #fff;
+			background: #fff;
+			box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+			transition: 0.7s ease all;
+		}
+	}
+
+	&__container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		margin: 0px -15px;
+	}
+
+	&__item {
+		padding: 0 30px 30px 30px;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.pagename {
+		display: inline-block;
+		margin: 150px 0 45px 0;
+		&::after {
+			left: 40%;
+		}
+	}
+}
+
+.testimonials {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.pagename {
+		display: inline-block;
+		margin: 150px 0 57px 0;
+
+		&::after {
+			left: 40%;
+		}
+	}
+
+	.bio {
+		border: 1px solid #212121;
+		width: 955px;
+		height: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		&__row {
+			display: flex;
+			flex-direction: colu;
+		}
+
+		&__img {
+			margin: 0 30px 0 0;
+		}
+
+		&__column {
+			display: flex;
+			flex-direction: column;
+			width: 570px;
+		}
+
+		&__name {
+			text-transform: uppercase;
+			font-family: Asap;
+			font-size: 30rem;
+			font-weight: 500;
+			opacity: 0.9;
+			color: #212121;
+		}
+
+		&__work {
+			text-transform: uppercase;
+			margin: 5px 0 10px 0;
+			font-family: Asap;
+			color: #212121;
+			opacity: 0.9;
+			font-size: 12rem;
+			font-style: italic;
+		}
+
+		&__description {
+			color: #212121;
+			opacity: 0.6;
+			font-size: 16rem;
+			font-weight: 400;
+			text-transform: uppercase;
+			font-family: Asap;
+			line-height: 26px;
+		}
+
+		.slider {
+			position: absolute;
+			top: 85%;
+			left: 48%;
+
+			&__option {
+				display: inline-block;
+				width: 13px;
+				height: 13px;
+				border: 1px solid #212121;
+			}
+		}
+	}
+
+	.results {
+		background-color: #f6f6f6;
+		margin: 122px 0 150px 0;
+		height: 300px;
+
+		&__row {
+			margin: 30px 0 0 0;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		&__imglist {
+			margin: 50px 0 0 0;
+			width: 100%;
+			display: flex;
+			align-items: end;
+			justify-content: space-around;
+			position: relative;
+
+			:nth-child(2) {
+				left: -25px;
+			}
+
+			:nth-child(3) {
+				left: -20px;
+			}
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__item-img {
+			position: relative;
+		}
+
+		&__number {
+			margin: 0 0 10px 0;
+			font-weight: 600;
+			font-family: 'Asap';
+			color: #212121;
+			opacity: 0.9;
+			font-size: 30rem;
+		}
+
+		&__description {
+			text-transform: uppercase;
+			font-weight: 400;
+			font-family: 'Asap';
+			color: #212121;
+			opacity: 0.9;
+			font-size: 22rem;
+		}
+	}
+}
+
+.contact {
+	height: 795px;
+	background: url('../img/contact/contact_bg.png') 50%/cover no-repeat;
+	.container {
+		max-width: 770px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.pagename {
+		align-self: center;
+		margin: 170px 0 70px 0;
+		color: #fff;
+		display: inline-block;
+		&::after {
+			background-color: #fff;
+			left: 40%;
+		}
+	}
+
+	.footerend {
+		margin: 85px 0 0 0;
+		.container {
+			max-width: 80vw;
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			position: relative;
+			
+		}
+	}
+
+	.soc {
+		display: flex;
+		margin: 0 -5px;
+		:nth-child(2) {
+			&:hover {
+				background-color: #1d9bf0;
+			}
+		}
+		:nth-child(3) {
+			&:hover {
+				background-color: #0A63BC;
+			}
+		}
+		:nth-child(4) {
+			&:hover {
+				background-color: #D54936;
+			}
+		}
+		:nth-child(5) {
+			&:hover {
+				background-color: #0056ff;
+			}
+		}
+		:nth-child(6) {
+			&:hover {
+				background-color: #EA4C89;
+			}
+		}
+	}
+
+	.social {
+		margin: 0 5px;
+	}
+
+	.copyright {
+		align-self: center;
+		position: absolute;
+		left: 42%;
+		font-family: Montserrat;
+		color: #ffffff;
+		font-size: 16rem;
+		letter-spacing: 0.96px;
+		font-weight: 400;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		
+		&__row {
+			display: flex;
+			flex-direction: row;
+			margin: 0 -15px 30px -15px;
+			:first-child, :last-child {
+				margin: 0 15px;
+				flex: 1 1 50%;
+				height: 60px;
+				padding: 0 0 0 10px;
+				color: #212121;
+				font-family: Asap;
+				font-size: 16rem;
+				font-weight: 400;
+				letter-spacing: 0.96px;
+			}
+		}
+
+		&__message {
+			height: 207px;
+			margin: 0 0 30px 0;
+			padding: 10px 0 0 10px;
+			color: #212121;
+			font-family: Asap;
+			font-size: 16rem;
+			font-weight: 400;
+			letter-spacing: 0.96px;
+			max-width: 100%;
+			min-width: 100%;
+			max-height: 207px;
+		}
+
+		&__button {
+			align-self: center;
+			padding: 20px 30px;
+			width: 125px;
+			.sendimg {
+				margin: 0 0 0 5px;
+			}
+		}
+	}
+}
+
 .social {
 	display: flex;
 	height: 27px;
 	width: 27px;
-	font-size: 16px;
+	font-size: 16rem;
 	justify-content: center;
 	align-items: center;
+	background-color: #fff;
+	color: #4d4d4d;
+
 	&:hover {
 		background-color: #395693;
 		color: #fff;
